@@ -9,7 +9,10 @@ const config = {
 }
 const FirebaseApp = firebase.initializeApp(config)
 
-console.log('FIREBASE init with config : ', FirebaseApp.options)
+console.log('FIREBASE Project ID : ', FirebaseApp.options.projectId)
+// eslint-disable-next-line no-multiple-empty-lines
+console.log('SEVER :', process.env.VUE_APP_FIREBASE_SERVER)
+// if (process.env.VUE_APP_FIREBASE_SERVER === 'prod') alert('prod')
 
 export default {
   FirebaseApp: FirebaseApp
